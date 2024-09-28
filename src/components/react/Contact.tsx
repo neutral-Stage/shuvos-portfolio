@@ -51,7 +51,7 @@ export function ContactForm() {
   return (
     <section
       id="contact"
-      className="flex flex-col justify-center align-middle gap-0 max-w-5xl mx-auto in-view px-8 py-20"
+      className="flex flex-col justify-center align-middle gap-0 max-w-5xl mx-auto in-view px-8 py-20 overflow-hidden"
       ref={ref}
     >
       <motion.div

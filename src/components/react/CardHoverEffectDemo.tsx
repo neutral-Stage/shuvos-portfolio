@@ -17,15 +17,14 @@ const CardHoverEffectDemo = ()=> {
   return (
     <section
       id="projects"
-      className="flex flex-col justify-center align-middle gap-2 py-20  max-w-5xl mx-auto in-view px-8"
+      className="flex flex-col justify-center align-middle gap-2 py-20  max-w-5xl mx-auto in-view px-8 overflow-hidden"
       style={{
         scrollMarginTop: "2rem",
       }}
       ref={ref}
-      
     >
       <motion.div
-        className="text-center"
+        className="text-center my-8"
         viewport={{ once: true, amount: 0.2,  }}
         whileInView={{ opacity: 1, y: 0, scale: 1 }}
         initial={{ opacity: 0, y: -100, scale: 1.5 }}

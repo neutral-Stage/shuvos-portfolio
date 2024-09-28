@@ -33,7 +33,7 @@ const About = () => {
   return (
     <section
       id="about"
-      className="flex flex-col justify-center align-middle gap-8 max-w-5xl h-screen mx-auto in-view px-8 py-80 mt-6"
+      className="flex flex-col justify-center align-middle gap-0 max-w-5xl mx-auto in-view px-8 py-20 overflow-hidden"
       ref={ref}
     >
       <motion.div

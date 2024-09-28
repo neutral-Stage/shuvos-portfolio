@@ -13,7 +13,7 @@ const Dialog = ({setIsDialogOpen,isError}:Props) => {
 >
   <div
     
-    className="relative m-4 p-4 w-2/5 min-w-[20%] max-w-[20%] rounded-lg bg-neutral-800 shadow-sm"
+    className="relative m-4 p-4 w-4/5 md:min-w-[20%] md:max-w-[20%] rounded-lg bg-neutral-800 shadow-sm"
   >
     <div className="flex shrink-0 items-center pb-4 text-xl font-medium text-neutral-300">
       {isError ? 'Message sent failed' : 'Message sent successfully!'}
