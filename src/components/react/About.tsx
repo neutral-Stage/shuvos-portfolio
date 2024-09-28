@@ -33,7 +33,7 @@ const About = () => {
   return (
     <section
       id="about"
-      className="flex flex-col justify-center align-middle gap-8 max-w-5xl h-screen mx-auto in-view px-8 py-80"
+      className="flex flex-col justify-center align-middle gap-8 max-w-5xl h-screen mx-auto in-view px-8 py-80 mt-6"
       ref={ref}
     >
       <motion.div
@@ -54,7 +54,7 @@ const About = () => {
           className="flex flex-col space-y-4 order-2 md:order-1 ml-2  md:w-[65%]"
         >
           <p className="text-3xl leading-snug tracking-wide font-bold relative">
-            Hello! I’m Shuvo, a <FlipWords words={adjectiveWords} /> <br className="hidden md:block" />{" "}
+            Hello! I’m Shuvo, a <br className="block md:hidden" /> <FlipWords words={adjectiveWords} /> <br className="hidden md:block" />{" "}
             full-stack developer with over 8 years in the tech industry.
           </p>
 

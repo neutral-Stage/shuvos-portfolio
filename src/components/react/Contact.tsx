@@ -1,14 +1,18 @@
 "use client";
-import React, { useContext, useEffect, useRef } from "react";
+import React, { useContext, useEffect, useRef,useState } from "react";
 import { Label } from "@/components/ui/label";
 import { Input } from "@/components/ui/input";
 import { cn } from "@/utils/cn";
-// import emailjs from '@emailjs/browser'
+import emailjs from '@emailjs/browser'
 import { Textarea } from "@/components/ui/textarea";
 import { motion, useInView } from "framer-motion";
 import { GlobalContext } from "@/context/GlobalContext";
+import Dialog from "../ui/Dialog";
 
 export function ContactForm() {
+  const [isLoading, setLoading] = useState(false);
+  const [isError, setIsError] = useState(false);
+  const [isDialogOpen, setIsDialogOpen] = useState(false);
   const ref = useRef(null)
   const inView = useInView(ref,{
     margin: '-300px'
@@ -22,24 +26,26 @@ export function ContactForm() {
   },[inView])
   const form = useRef<HTMLFormElement>(null);
   const handleSubmit = (e: React.FormEvent<HTMLFormElement>) => {
-    // const serviceID = "default_service";
-    // const templateID = "template_i5ji46h";
+    const serviceID = "service_3sbdzu9";
+    const templateID = "template_6z0ti89";
     e.preventDefault();
-    console.log(e.target);
-    // if (form.current) {
-    //   emailjs
-    //     .sendForm(serviceID, templateID, form.current, {
-    //       publicKey: "i76kN2P6IxwJ0XnuI",
-    //     })
-    //     .then(
-    //       (data) => {
-    //         console.log("SUCCESS!", data);
-    //       },
-    //       (error) => {
-    //         console.log("FAILED...", error.text);
-    //       }
-    //     );
-    // }
+    if (form.current) {
+      setLoading(true);
+      emailjs
+        .sendForm(serviceID, templateID, form.current, {
+          publicKey: "user_lGefbjeUXEPQBgLK1x1qF",
+        })
+        .then(
+          (data) => {
+            console.log("SUCCESS!", data);
+            setIsError(false)
+          },
+          (error) => {
+            console.log("FAILED...", error.text);
+            setIsError(true)
+          }
+        ).finally(()=>{setIsDialogOpen(true);setLoading(false);});
+    }
   };
 
   return (
@@ -106,8 +112,9 @@ export function ContactForm() {
         <Textarea id="message" placeholder="Message" name="message" />
       </LabelInputContainer>
       <button
-        className="group/btn relative block h-10 w-full rounded-md bg-gradient-to-br from-black to-neutral-600 font-medium text-white shadow-[0px_1px_0px_0px_#ffffff40_inset,0px_-1px_0px_0px_#ffffff40_inset] dark:bg-zinc-800 dark:from-zinc-900 dark:to-zinc-900 dark:shadow-[0px_1px_0px_0px_var(--zinc-800)_inset,0px_-1px_0px_0px_var(--zinc-800)_inset]"
+        className="group/btn relative block h-10 w-full rounded-md bg-gradient-to-br from-black to-neutral-600 font-medium text-white shadow-[0px_1px_0px_0px_#ffffff40_inset,0px_-1px_0px_0px_#ffffff40_inset] dark:bg-zinc-800 dark:from-zinc-900 dark:to-zinc-900 dark:shadow-[0px_1px_0px_0px_var(--zinc-800)_inset,0px_-1px_0px_0px_var(--zinc-800)_inset] dark:text-zinc-300 disabled:cursor-not-allowed disabled:opacity-50"
         type="submit"
+        disabled={isLoading}
       >
         Submit
         <BottomGradient />
@@ -115,6 +122,9 @@ export function ContactForm() {
 
       <div className="my-8 h-[1px] w-full bg-gradient-to-r from-transparent via-neutral-200 to-transparent dark:via-neutral-700" />
     </form>
+    {
+      isDialogOpen ? <Dialog isError={isError} setIsDialogOpen={setIsDialogOpen} /> : null
+    }
     </section>
   );
 }

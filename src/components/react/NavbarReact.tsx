@@ -45,7 +45,7 @@ export const NavbarReact = () => {
 
   return (
     <div
-      className={`fixed top-2 inset-x-0 max-w-3xl mx-auto z-50 flex items-center justify-center w-full py-2  rounded-full transition-all duration-200 ease-in-out  ${
+      className={`fixed top-2 inset-x-0 max-w-3xl mx-auto z-50 flex items-center justify-center w-full py-2  rounded-full transition-all duration-200 ease-in-out ${
         isHeaderSticky ? "dark:bg-brand shadow-[0px_0px_20px_#6366F1]" : ""
       }`}
     >

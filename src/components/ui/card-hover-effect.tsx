@@ -1,8 +1,8 @@
 import { cn } from "@/utils/cn";
 import { AnimatePresence, motion } from "framer-motion";
-import { useState } from "react";
+import { memo, useState } from "react";
 
-export const HoverEffect = ({
+export const HoverEffect = memo(  ({
   items,
   className,
 }: {
@@ -56,9 +56,9 @@ export const HoverEffect = ({
       ))}
     </div>
   );
-};
+});
 
-export const Card = ({
+export const Card = memo( ({
   className,
   children,
   image,
@@ -82,7 +82,7 @@ export const Card = ({
       <img className="absolute top-0 left-0 opacity-0 group-hover:opacity-100 transition-all duration-450 ease-in-out object-fill w-full h-full"  loading="lazy"  src={image} alt={title}  />
     </div>
   );
-};
+});
 export const CardTitle = ({
   className,
   children,

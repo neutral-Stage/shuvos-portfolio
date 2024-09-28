@@ -1,5 +1,5 @@
 import useLocomotiveScroll from "@/utils/hooks/useLocomotiveScroll";
-import { CardHoverEffectDemo } from "./CardHoverEffectDemo";
+import  CardHoverEffectDemo  from "./CardHoverEffectDemo";
 import { HeroHighlightDemo } from "./HeroHighlightDemo";
 import { NavbarReact } from "./NavbarReact";
 import About from "./About";

@@ -1,9 +1,9 @@
 import { GlobalContext } from "@/context/GlobalContext";
 import { HoverEffect } from "@ui/card-hover-effect";
 import { motion, useInView } from "framer-motion";
-import { useContext, useEffect, useRef } from "react";
+import { memo, useContext, useEffect, useRef } from "react";
 
-export function CardHoverEffectDemo() {
+const CardHoverEffectDemo = ()=> {
   const ref = useRef(null)
   const inView = useInView(ref,{
     margin: '-300px'
@@ -78,3 +78,6 @@ export const projects = [
   },
   
 ];
+
+
+export default memo(CardHoverEffectDemo);
