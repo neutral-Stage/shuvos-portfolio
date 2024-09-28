@@ -74,7 +74,7 @@ export function ContactForm() {
           <Label htmlFor="firstname">First name</Label>
           <Input
             id="firstname"
-            placeholder="Tyler"
+            placeholder="First Name"
             type="text"
             name="firstname"
           />
@@ -83,7 +83,7 @@ export function ContactForm() {
           <Label htmlFor="lastname">Last name</Label>
           <Input
             id="lastname"
-            placeholder="Durden"
+            placeholder="Last Name"
             type="text"
             name="lastname"
           />
@@ -93,7 +93,7 @@ export function ContactForm() {
         <Label htmlFor="email">Email Address</Label>
         <Input
           id="email"
-          placeholder="projectmayhem@fc.com"
+          placeholder="E-mail"
           type="email"
           name="email"
         />
@@ -109,7 +109,7 @@ export function ContactForm() {
       </LabelInputContainer>
       <LabelInputContainer className="mb-4">
         <Label htmlFor="message">Message</Label>
-        <Textarea id="message" placeholder="Message" name="message" />
+        <Textarea id="message" placeholder="Your Message" name="message" />
       </LabelInputContainer>
       <button
         className="group/btn relative block h-10 w-full rounded-md bg-gradient-to-br from-black to-neutral-600 font-medium text-white shadow-[0px_1px_0px_0px_#ffffff40_inset,0px_-1px_0px_0px_#ffffff40_inset] dark:bg-zinc-800 dark:from-zinc-900 dark:to-zinc-900 dark:shadow-[0px_1px_0px_0px_var(--zinc-800)_inset,0px_-1px_0px_0px_var(--zinc-800)_inset] dark:text-zinc-300 disabled:cursor-not-allowed disabled:opacity-50"

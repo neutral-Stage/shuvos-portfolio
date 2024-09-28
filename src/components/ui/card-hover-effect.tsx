@@ -72,7 +72,7 @@ export const Card = memo( ({
   return (
     <div
       className={cn(
-        "rounded-2xl h-full w-full p-4 overflow-hidden bg-black border border-transparent dark:border-indigo-200/[0.2] group-hover:border-indigo-500 relative z-20 ",
+        "rounded-2xl h-full w-full p-4 overflow-hidden text-center bg-black border border-transparent dark:border-indigo-200/[0.2] group-hover:border-indigo-500 relative z-20 ",
         className
       )}
     >
@@ -106,7 +106,7 @@ export const CardDescription = ({
   return (
     <p
       className={cn(
-        "mt-8 text-zinc-300 tracking-wide break-words leading-relaxed text-xs font-mono flex flex-wrap gap-2",
+        "mt-8 justify-center items-center text-zinc-300 tracking-wide break-words leading-relaxed text-xs font-mono flex flex-wrap gap-2",
         className
       )}
     >
