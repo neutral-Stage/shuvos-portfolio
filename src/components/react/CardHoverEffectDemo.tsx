@@ -58,11 +58,17 @@ export const projects = [
     image: '/projects/probely.png'
   },
   {
-    title: "Code Builder IT",
-    stacks: ['Astro.js', 'React.js', 'Sanity.io', 'Typescript', 'GROQ' , 'Aceternity UI', 'Tailwind CSS'],
-    link: "https://code-builder-it.vercel.app/",
-    image: '/projects/code_builder_it.png'
+    title: "Personal Effects",
+    stacks: ['Gatsby.js', 'React.js', 'Sanity.io', 'Typescript', 'GROQ' , 'Shopify API', 'GraphQL', 'Tailwind CSS'],
+    link: "https://www.personaleffects.london/",
+    image: '/projects/personal_effects.png'
   },
+  // {
+  //   title: "Code Builder IT",
+  //   stacks: ['Astro.js', 'React.js', 'Sanity.io', 'Typescript', 'GROQ' , 'Aceternity UI', 'Tailwind CSS'],
+  //   link: "https://code-builder-it.vercel.app/",
+  //   image: '/projects/code_builder_it.png'
+  // },
   {
     title: "Westminster 2024",
     stacks: ['Vue.js', 'Nuxt.js', 'Sanity.io', 'GROQ' , 'Tailwind CSS'],
